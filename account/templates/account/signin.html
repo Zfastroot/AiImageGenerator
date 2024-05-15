@@ -1,0 +1,98 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'account/fonts/icomoon/style.css '%}">
+
+    <link rel="stylesheet" href="{% static 'account/css/owl.carousel.min.css'%}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'account/css/bootstrap.min.css'%}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'account/css/style.css'%}">
+
+    <title>Login</title>
+  </head>
+  <body>
+    <header id="header" class="fixed-top ">
+      <div class="" style="margin-left: 16px;">
+      <h1 class="logo"><a href="{% url 'index'%}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+</svg>
+      </a></h1>
+      </div>
+  </header><!-- End Header -->
+
+  
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="{% static 'account/images/undraw_remotely_2j6y.svg'%}" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-4">
+              <h3>Sign In</h3>
+              <a href="{% url 'signup' %}"><p class="mb-4">Create your GoFly account</p></a>
+            </div>
+            <form  method="post">
+              {% csrf_token %}
+              <div class="form-group first">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username">
+
+              </div>
+              <div class="form-group last mb-4">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password">
+                
+              </div>
+              
+              <div class="d-flex mb-5 align-items-center">
+                <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label>
+                <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
+              </div>
+
+              <button type="submit" class="btn btn-block btn-primary">Sign In </button>
+              <span class="d-block text-left my-4 text-muted">&mdash; or login with &mdash;</span>
+              
+              <div class="social-login">
+                <a href="#" class="facebook">
+                  <span class="icon-facebook mr-3"></span> 
+                </a>
+                <a href="#" class="twitter">
+                  <span class="icon-twitter mr-3"></span> 
+                </a>
+                <a href="#" class="google">
+                  <span class="icon-google mr-3"></span> 
+                </a>
+              </div>
+            </form>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  
+    <script src="{% static 'account/js/jquery-3.3.1.min.js'%}"></script>
+    <script src="{% static 'account/js/popper.min.js'%}"></script>
+    <script src="{% static 'account/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'account/js/main.js'%}"></script>
+  </body>
+</html>

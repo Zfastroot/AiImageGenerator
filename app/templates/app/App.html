@@ -1,0 +1,23 @@
+{% extends 'basetree.html' %}
+
+{% block content %}
+    {% load static %}
+    <main id="main">
+      <h1>Ai Image Generator</h1>
+      <form  method="POST">
+        {% csrf_token %}
+        <textarea name="prompt" id="prompt" type="text" placeholder="Enter your prompt" ></textarea> 
+
+        <div>
+          <button id="generateBtn" type="submit" name="generateBtn">Generate</button>
+        </div>
+      </form>
+      {% if image_data %}
+        <div id="image-container">
+            <img src="data:image/png;base64,{{ image_data }}" alt="Generated Image">
+        </div>
+      {% endif %}
+    </main><!-- End #main -->
+
+
+  {% endblock %}
