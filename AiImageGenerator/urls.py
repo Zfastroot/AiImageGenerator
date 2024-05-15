@@ -16,7 +16,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from landingpage.views import index,about,team,demo,service,contact
+from account.views import signin , signup , logout_user
+from app.views import app
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('', index , name='index'),
+    path('about/', about , name='about'),
+    path('service/', service , name='service'),
+    path('team/', team , name='team'),
+    path('demo/', demo , name='demo'),
+    path('contact/', contact , name='contact'),
+    path('signin/',signin ,  name='signin'),
+    path('signup/',signup ,  name='signup'),
+    path('logout/',logout_user ,  name='logout'),
+    path('app/',app ,  name='app'),
+
+]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
