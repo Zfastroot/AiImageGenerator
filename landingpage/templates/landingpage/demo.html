@@ -3,243 +3,43 @@
 {% block content %}
     {% load static %}
     <main id="main">
-        <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
-        <div class="container" data-aos="fade-up">
-    
-            <div class="section-title">
-            <h2>Portfolio</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        
+        <h1 style="color: blueviolet;font-weight: bold;text-align: center;margin-left: 10%; margin-right: 10%;"> Unveiling the Artistic Image Generator: A Journey of Collaboration and Innovation</h1>
+        <p style="font-weight: bold;text-align: center;margin-left: 10%; margin-right: 10%; ">
+             Welcome to the unveiling of the Artistic Image Generator project, where creativity converges with cutting-edge technology to redefine the boundaries of digital artistry. Join us as we delve into the collaborative journey of Zakaria Amchich and Hajar Loraoui, two passionate developers dedicated to pushing the limits of AI-driven creativity.
+        </p>
+
+        <div> <img style="display: block; margin-left: auto; margin-right: auto; " src="{% static 'assets/img/favicon.png'%}" alt=""></div>
+        
+        <div><img style="display: block; margin-left: auto; margin-right: auto; " src="{% static 'assets/img/AiTextToImageGUI2.png'%}" alt="">
             </div>
-    
-            <div class="row">
-            <div class="col-lg-12 d-flex justify-content-center">
-                <ul id="portfolio-flters">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-app">App</li>
-                <li data-filter=".filter-card">Card</li>
-                <li data-filter=".filter-web">Web</li>
-                </ul>
-            </div>
-            </div>
-    
-            <div class="row portfolio-container">
-    
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                <img src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <h4>App 1</h4>
-                    <p>App</p>
-                </div>
-                <div class="portfolio-links">
-                    <a href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-                </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                <img src="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <h4>Web 3</h4>
-                    <p>Web</p>
-                </div>
-                <div class="portfolio-links">
-                    <a href="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-                </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                <img src="{% static 'assets/img/portfolio/portfolio-3.jpg' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <h4>App 2</h4>
-                    <p>App</p>
-                </div>
-                <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-3.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-                </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                <img src="{% static 'assets/img/portfolio/portfolio-4.jpg' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <h4>Card 2</h4>
-                    <p>Card</p>
-                </div>
-                <div class="portfolio-links">
-                    <a href="{% static 'assets/img/portfolio/portfolio-4.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-                </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                <img src="{% static 'assets/img/portfolio/portfolio-5.jpg' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <h4>Web 2</h4>
-                    <p>Web</p>
-                </div>
-                <div class="portfolio-links">
-                    <a href="{% static 'assets/img/portfolio/portfolio-5.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-                </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                <img src="{% static 'assets/img/portfolio/portfolio-6.jpg' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <h4>App 3</h4>
-                    <p>App</p>
-                </div>
-                <div class="portfolio-links">
-                    <a href="{% static 'assets/img/portfolio/portfolio-6.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-                </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                <img src="{% static 'assets/img/portfolio/portfolio-7.jpg' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <h4>Card 1</h4>
-                    <p>Card</p>
-                </div>
-                <div class="portfolio-links">
-                    <a href="{% static 'assets/img/portfolio/portfolio-7.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-                </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                <img src="{% static 'assets/img/portfolio/portfolio-8.jpg' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <h4>Card 3</h4>
-                    <p>Card</p>
-                </div>
-                <div class="portfolio-links">
-                    <a href="{% static 'assets/img/portfolio/portfolio-8.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-                </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                <img src="{% static 'assets/img/portfolio/portfolio-9.jpg' %}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <h4>Web 3</h4>
-                    <p>Web</p>
-                </div>
-                <div class="portfolio-links">
-                    <a href="{% static 'assets/img/portfolio/portfolio-9.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-                </div>
-            </div>
-    
-            </div>
-    
-        </div>
-        </section><!-- End Portfolio Section -->
-    
-        <!-- ======= Pricing Section ======= -->
-        <section id="pricing" class="pricing section-bg">
-        <div class="container" data-aos="fade-up">
-    
-            <div class="section-title">
-            <h2>Pricing</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-            </div>
-    
-            <div class="row">
-    
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="box">
-                <h3>Free</h3>
-                <h4><sup>$</sup>0<span> / month</span></h4>
+            <h2 style="color: blueviolet;text-align: center;">Purpose:</h2> 
+            <p style="font-weight: bold;text-align: center;margin-left: 10%; margin-right: 10%; "> The Artistic Image Generator project is a culmination of our shared passion for AI and digital innovation. By harnessing the power of AI models, we aim to revolutionize the process of image generation and empower artists and creators with new avenues for expression.</p>
+            <h2 style="color: blueviolet;text-align: center;">Team Members:</h2>  
+            <p style="font-weight: bold;text-align: center; margin-left: 10%; margin-right: 10%; ">Zakaria Amchich and Hajar Loraoui embarked on this project with a shared vision and a division of tasks. While no single individual completed all aspects of development, we collaborated seamlessly to bring each phase of the project to fruition.</p>
+            <h2 style="color: blueviolet;text-align: center;" >Passion: </h2> 
+            <p style="font-weight: bold;text-align: center; margin-left: 10%; margin-right: 10%; ">From a young age, my passion for creating and developing tools and applications has been unwavering. The allure of technology and the endless possibilities it offers captivated me, driving my journey into the world of software development.</p>
+            <h2 style="color: blueviolet;text-align: center;">Project Theme:</h2>  
+            <p style="font-weight: bold;text-align: center; margin-left: 10%; margin-right: 10%; ">Our project revolves around the fascinating realm of AI, exploring its capabilities and potential applications in the realm of digital art and creativity.</p>
+            <h2 style="color: blueviolet;text-align: center;">Story:</h2> 
+            <p style="font-weight: bold;text-align: center; margin-left: 10%; margin-right: 10%; ">My journey into the world of AI and digital innovation began with a simple curiosity about its workings and potential. When presented with the opportunity to define and work on a project, I seized upon the idea of exploring AI and its integration into our applications. Through this project, I aimed to deepen my understanding of AI models and their practical applications, enriching my skill set and broadening my horizons as a developer.</p>
+            <h2 style="color: blueviolet;text-align: center;">Value Proposition:</h2>
+            <p style="font-weight: bold;text-align: center; margin-left: 10%; margin-right: 10%; ">Throughout this project, I have gained invaluable insights into the world of AI, from the intricacies of model training to the seamless integration of AI APIs into our applications. This project has not only expanded my technical expertise but has also fueled my passion for continuous learning and innovation.</p> 
+            <h2 style="color: blueviolet;text-align: center;">Technologies Used:</h2>  
+            <p style="font-weight: bold;text-align: center; margin-left: 10%; margin-right: 10%; ">Our project leveraged a range of technologies, including Stable Diffusion for accessing AI models, Django for backend development, Pillow for image processing, and a plethora of other tools and frameworks. Each technology was carefully chosen to optimize performance and functionality, ensuring a seamless user experience.</p>
+            <h2 style="color: blueviolet;text-align: center;">Challenge:</h2>  
+            <p style="font-weight: bold;text-align: center; margin-left: 10%; margin-right: 10%; ">One of the most significant challenges we encountered was the hardware limitation surrounding GPU acceleration. Despite our efforts to leverage GPU acceleration for image generation, the lack of a suitable Nvidia GPU posed a hurdle, necessitating reliance on CPU processing. This resulted in longer processing times and delayed the development of the web application and landing page components of our project.
+                Stay tuned as we delve deeper into the accomplishments, challenges, and lessons learned throughout our journey with the Artistic Image Generator project. Together, we're redefining the intersection of creativity and technology, one pixel at a time.</p>
+            
                 <ul>
-                    <li>Aida dere</li>
-                    <li>Nec feugiat nisl</li>
-                    <li>Nulla at volutpat dola</li>
-                    <li class="na">Pharetra massa</li>
-                    <li class="na">Massa ultricies mi</li>
-                </ul>
-                <div class="btn-wrap">
-                    <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-                </div>
-            </div>
-    
-            <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
-                <div class="box featured">
-                <h3>Business</h3>
-                <h4><sup>$</sup>19<span> / month</span></h4>
-                <ul>
-                    <li>Aida dere</li>
-                    <li>Nec feugiat nisl</li>
-                    <li>Nulla at volutpat dola</li>
-                    <li>Pharetra massa</li>
-                    <li class="na">Massa ultricies mi</li>
-                </ul>
-                <div class="btn-wrap">
-                    <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-                </div>
-            </div>
-    
-            <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-                <div class="box">
-                <h3>Developer</h3>
-                <h4><sup>$</sup>29<span> / month</span></h4>
-                <ul>
-                    <li>Aida dere</li>
-                    <li>Nec feugiat nisl</li>
-                    <li>Nulla at volutpat dola</li>
-                    <li>Pharetra massa</li>
-                    <li>Massa ultricies mi</li>
-                </ul>
-                <div class="btn-wrap">
-                    <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-                </div>
-            </div>
-    
-            <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
-                <div class="box">
-                <span class="advanced">Advanced</span>
-                <h3>Ultimate</h3>
-                <h4><sup>$</sup>49<span> / month</span></h4>
-                <ul>
-                    <li>Aida dere</li>
-                    <li>Nec feugiat nisl</li>
-                    <li>Nulla at volutpat dola</li>
-                    <li>Pharetra massa</li>
-                    <li>Massa ultricies mi</li>
-                </ul>
-                <div class="btn-wrap">
-                    <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-                </div>
-            </div>
-    
-            </div>
-    
-        </div>
-        </section><!-- End Pricing Section -->
+                    
+                    <li style = "font-weight: bold; margin-left: 10%; margin-right: 10%; " ><a  href="https://github.com/Zfastroot/AiImageGenerator.git" target="_blank">GitHub Repository</a></li>
+                    <li style = "font-weight: bold; margin-left: 10%; margin-right: 10%; "><a  href="https://plankton-app-qbej7.ondigitalocean.app" target="_blank">Deployed Project Page</a></li>
+                    <li style = "font-weight: bold; margin-left: 10%; margin-right: 10%; "><a  href="https://plankton-app-qbej7.ondigitalocean.app" target="_blank">Project's Landing Page</a></li>
+                    <li style = "font-weight: bold; margin-left: 10%; margin-right: 10%; "><a  href="https://www.linkedin.com/in/zakaria-amchich" target="_blank">LinkedIn Profile zakaria</a></li>
+                    <li style = "font-weight: bold; margin-left: 10%; margin-right: 10%; "><a  href="https://www.linkedin.com/in/hajar-loraoui" target="_blank">LinkedIn Profile hajar</a></li>
+                  </ul>
+        
 
     </main>
 
