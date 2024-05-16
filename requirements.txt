@@ -6,6 +6,7 @@ diffusers==0.27.2
 Django==5.0.6
 filelock==3.14.0
 fsspec==2024.5.0
+gunicorn==22.0.0
 huggingface-hub==0.23.0
 idna==3.7
 importlib_metadata==7.1.0
