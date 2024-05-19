@@ -15,5 +15,11 @@ def team(request):
 def contact(request):
     return render(request, 'landingpage/contact.html')
 
-def demo(request):
-    return render(request, 'landingpage/demo.html')
+def blog(request):
+    return render(request, 'landingpage/blog.html')
+
+def term(request):
+    return render(request, 'landingpage/term.html')
+
+def privacy(request):
+    return render(request, 'landingpage/privacy.html')

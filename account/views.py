@@ -9,7 +9,7 @@ def signin(request):
             user = authenticate(request, username = username ,password = password)
             if user:
                 login(request , user)
-                return redirect('index')
+                return redirect('app')
     return render(request , 'account/signin.html')
 
 
@@ -23,7 +23,7 @@ def signup(request):
         if username and email and password:  # Check if all required fields are provided
             user = User.objects.create_user(username=username, email=email, password=password)
             login(request, user)
-            return redirect('index')
+            return redirect('app')
     return render(request , 'account/signup.html')
 
 

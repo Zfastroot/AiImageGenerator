@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from landingpage.views import index,about,team,demo,service,contact
+from landingpage.views import index,about,team,blog,service,contact,term,privacy
 from account.views import signin , signup , logout_user
 from app.views import app
 from django.conf import settings
@@ -28,11 +28,13 @@ urlpatterns = [
     path('about/', about , name='about'),
     path('service/', service , name='service'),
     path('team/', team , name='team'),
-    path('demo/', demo , name='demo'),
+    path('demo/', blog , name='blog'),
     path('contact/', contact , name='contact'),
     path('signin/',signin ,  name='signin'),
     path('signup/',signup ,  name='signup'),
     path('logout/',logout_user ,  name='logout'),
     path('app/',app ,  name='app'),
+    path('term/',term ,  name='term'),
+    path('privacy/',privacy ,  name='privacy'),
 
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
