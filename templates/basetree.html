@@ -36,12 +36,28 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   <style>
-    /* Add your CSS styles here */
-    #prompt {
-        width: 45%;
-        height: 100px; /* Adjust the height as needed */
-        resize: vertical; /* Allow vertical resizing */
-    }
+
+.erea{
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+textarea {
+    width: 65%;
+    height: 200px; /* Adjust the height as needed */
+    resize: vertical; /* Allow vertical resizing */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    align-items: center;
+}
+
+textarea:focus {
+    border-color: purple;
+}
+
 </style>
 </head>
 
@@ -57,7 +73,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           {% if user.is_authenticated%}
-            <li><a  >{{user.username}}</a></li>
+            <li style="font-weight: bold; color: aliceblue;" >{{user.username}}</li>
             <li><a class="getstarted scrollto" href="{% url 'logout'%}">Log Out</a></li>
           {% else %}
             <li><a class="getstarted scrollto" href="{% url 'signin'%}">Sign In</a></li>
