@@ -1,42 +1,101 @@
-{% extends 'basetree.html' %}
+{% extends 'basetwo.html' %}
 
 {% block content %}
     {% load static %}
     <main id="main">
-      <h1 style=" font-weight: bold;text-align: center;margin-left: 10%; margin-right: 10%;">Ai Image Generator</h1>
-      <form  method="POST">
-        {% csrf_token %}
-        <div class="erea">
-          <textarea placeholder="Enter your text here..." name="prompt" id="prompt" type="text"></textarea>
-        </div>
-        <div class="erea">
-          <body>
-            <button id="generateBtn" type="submit" name="generateBtn" style="
-                background-color: #6a0dad;
-                color: white;
-                border: none;
-                padding: 15px 30px;
-                font-size: 16px;
-                cursor: pointer;
-                border-radius: 5px;
-                transition: background-color 0.3s, transform 0.3s;
-            " 
-            onmouseover="this.style.backgroundColor='#7a0fff'; this.style.transform='scale(1.05)';" 
-            onmouseout="this.style.backgroundColor='#6a0dad'; this.style.transform='scale(1)';" 
-            onmousedown="this.style.backgroundColor='#5a00cc'; this.style.transform='scale(0.95)';" 
-            onmouseup="this.style.backgroundColor='#7a0fff'; this.style.transform='scale(1.05)';">
-                Generate
-            </button>
-        </div>
-  
-        
-      </form>
-      {% if image_data %}
-        <div class="erea">
-            <img src="data:image/png;base64,{{ image_data }}" alt="Generated Image">
-        </div>
-      {% endif %}
-    </main><!-- End #main -->
 
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container">
+  
+          <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
+              <img src="{% static 'assets/img/about1.png' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+              <h3 style="color: blueviolet;font-weight: bold;">Download Ai Text to artistic image</h3>
+              <p class="fst-italic">
+              <br>
+              Unleash your creativity with our cutting-edge AI Text-to-Image Generator desktop app! Transform your textual descriptions into stunning visual art effortlessly. Our app offers two versions to cater to your specific hardware capabilities:
+              </p>
+              <h3 style="color: blueviolet;font-weight: bold;">1. Fast Run (CUDA-GPU Version):</h3>
+              <ul>
+                <li><i class="bi bi-check-circle"></i><span style="font-weight: bold;">Harness the power of your GPU for lightning-fast image generation.</li>
+                <li><i class="bi bi-check-circle"></i><span style="font-weight: bold;">Ideal for users with NVIDIA CUDA-enabled GPUs</li>
+                <li><i class="bi bi-check-circle"></i><span style="font-weight: bold;">Enjoy quicker processing times and a smoother experience.</li>
+                <li><i class="bi bi-check-circle"></i><span style="font-weight: bold;">Perfect for high-demand projects and professional use.</li>
+              </ul>
+              <a href="#" class="read-more">Download Version CUDA <i class="bi bi-long-arrow-right"></i></a>
+              <br>
+              <h3 style="color: blueviolet;font-weight: bold;">2. Standard Run (CPU Version): </h3>
+              <ul>
+                <li><i class="bi bi-check-circle"></i><span style="font-weight: bold;">Compatible with all modern desktop CPUs.</li>
+                <li><i class="bi bi-check-circle"></i><span style="font-weight: bold;">Experience the power of AI-generated images without the need for specialized hardware.</li>
+                <li><i class="bi bi-check-circle"></i><span style="font-weight: bold;">Perfect for casual users and those without dedicated GPUs.</li>
+                <li><i class="bi bi-check-circle"></i><span style="font-weight: bold;">Easy to use and optimized for efficient performance on standard systems.</li>
+              </ul>
+              <br>
+              <a href="#" class="read-more">Download Version CPU <i class="bi bi-long-arrow-right"></i></a>
+              <br>
+              <div>
+                <p>
+                  
+                  <h3 style="color: blueviolet;font-weight: bold;">Features</h3>
+                  <br>
+                  <ul>
+                    <li>Intuitive user interface for seamless text-to-image conversion.</li>
+                    <li>High-quality image output with customizable settings.</li>
+                    <li>Regular updates to enhance functionality and performance.</li>
+                    <li>Secure and lightweight installation process.</li>
+                  </ul>
+
+                  <br>
+                  <br>
+                  <h3 style="color: blueviolet;font-weight: bold;">Get in Touch</h3>
+                  <br>
+                  We are always excited to hear from our users and partners. Whether you have a question, feedback, or a business inquiry, feel free to reach out to us. Together, let's push the boundaries of creativity and technology.
+                </p>
+              </div>
+              <br>
+              <a href="{%url 'contact'%}" class="read-more">Contact us<i class="bi bi-long-arrow-right"></i></a>
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End About Section -->
+
+      <!-- ======= Counts Section ======= -->
+      <!-- <section id="counts" class="counts">
+          <div class="container">
+      
+              <div class="row counters">
+      
+              <div class="col-lg-3 col-6 text-center">
+                  <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Clients</p>
+              </div>
+      
+              <div class="col-lg-3 col-6 text-center">
+                  <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Projects</p>
+              </div>
+      
+              <div class="col-lg-3 col-6 text-center">
+                  <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Hours Of Support</p>
+              </div>
+      
+              <div class="col-lg-3 col-6 text-center">
+                  <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Hard Workers</p>
+              </div>
+      
+              </div>
+      
+          </div>
+          </section> -->
+          <!-- End Counts Section -->
+  
+  </main><!-- End #main -->
 
   {% endblock %}
